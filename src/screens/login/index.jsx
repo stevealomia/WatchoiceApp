@@ -29,7 +29,7 @@ export default function LoginScreen() {
         throw Error(res.error)
       }
       setAuth(res)
-      navigate('/')
+      navigate('/watches')
     } catch (err) {
       alert('Email or password is invalid')
       console.log('err', err)
@@ -42,11 +42,11 @@ export default function LoginScreen() {
     <div>
       <form onSubmit={onSubmit}>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email address</label>
+          <label htmlFor="email" className="form-label text-light">Email address</label>
           <input type="email" className="form-control" id="email" aria-describedby="emailHelp" onChange={onChange('email')} />
         </div>
         <div className="mb-3">
-          <label htmlFor="password" className="form-label">Password</label>
+          <label htmlFor="password" className="form-label text-light">Password</label>
           <input type="password" className="form-control" id="password" onChange={onChange('password')} />
         </div>
         <button type="submit" className="btn btn-primary" disabled={isLoading}>

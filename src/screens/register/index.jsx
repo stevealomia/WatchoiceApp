@@ -29,7 +29,7 @@ export default function RegisterScreen() {
       }
       alert('Successfully register')
       setAuth(res)
-      navigate('/')
+      navigate('/watches')
     } catch (err) {
       alert(err.message)
     } finally {
@@ -41,15 +41,15 @@ export default function RegisterScreen() {
     <div>
       <form onSubmit={onSubmit}>
         <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name</label>
+          <label htmlFor="name" className="form-label text-light">Name</label>
           <input type="text" className="form-control" id="name" aria-describedby="emailHelp" onChange={onChange('name')} />
         </div>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email address</label>
+          <label htmlFor="email" className="form-label text-light">Email address</label>
           <input type="email" className="form-control" id="email" aria-describedby="emailHelp" onChange={onChange('email')} />
         </div>
         <div className="mb-3">
-          <label htmlFor="password" className="form-label">Password</label>
+          <label htmlFor="password" className="form-label text-light">Password</label>
           <input type="password" className="form-control" id="password" onChange={onChange('password')} />
         </div>
         <button type="submit" className="btn btn-primary" disabled={isLoading}>
